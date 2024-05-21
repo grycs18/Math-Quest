@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Media;
+
+namespace HangMath
+{
+	
+	public partial class MainForm : Form
+	{
+		private SoundPlayer sound;
+		
+		public MainForm()
+		{
+			
+			InitializeComponent();
+			sound = new SoundPlayer("Pirates Of The Caribbean Theme Song (320).wav");
+			sound.Play();
+			
+		}
+		
+		void PictureBox1Click(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void PictureBox2Click(object sender, EventArgs e)
+		{
+			
+			 Cursor.Current = Cursors.WaitCursor;	
+			Lobby enter = new Lobby();
+			enter.Show();
+			this.Hide();
+			
+		
+		}
+		
+		void PictureBox4Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+		
+		void PictureBox3Click(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void MutecheckBox1CheckedChanged(object sender, EventArgs e)
+		{
+			if (mutecheckBox1.Checked)
+			{
+				mutecheckBox1.Text = "Unmute";
+				sound.Stop();
+			}
+			else
+			{
+				mutecheckBox1.Text = "Mute";
+				sound.Play();
+			}
+		}
+		
+		void Panel1Paint(object sender, PaintEventArgs e)
+		{
+			
+		}
+	}
+}
