@@ -1,11 +1,3 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Administrator
- * Date: 5/14/2024
- * Time: 11:05 AM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
 namespace HangMath
 {
 	partial class Lobby
